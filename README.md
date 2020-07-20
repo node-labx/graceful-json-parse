@@ -1,5 +1,3 @@
-# graceful-json-parse
-
 ## Install
 
 ```bash
@@ -32,25 +30,24 @@ const jsonParse = require("graceful-json-parse");
 const result = jsonParse("{}");
 ```
 
-### 2、tupleJsonParse(jsonString[, options])
+### 2、jsonParseAndReturnTuple(jsonString[, options])
 
-#### Example
+The parameters and return value is the same as above.
 
 ```js
-const { tupleJsonParse } = require("graceful-json-parse");
+const { jsonParseAndReturnTuple } = require("graceful-json-parse");
 
-const [err, result] = tupleJsonParse("{}");
+const [error, data] = jsonParseAndReturnTuple("{}");
 ```
 
-### 3、callbackJsonParse
+### 3、jsonParseWithCallback(jsonString[, options], callback)
+
+The parameters and return value is the same as above.
 
 ```js
-const { callbackJsonParse } = require("graceful-json-parse");
+const { jsonParseWithCallback } = require("graceful-json-parse");
 
-callbackJsonParse("{}", function (err, result) {
-  if (err) {
-    // TODO
-  }
+jsonParseWithCallback("{}", function (error, data) {
   // your code
 });
 ```
