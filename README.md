@@ -13,7 +13,6 @@ npm install graceful-json-parse
 - jsonString: The string to parse as JSON.
 - options(optional)
   - options.reviver: If a function, this prescribes how the value originally produced by parsing is transformed, before being returned. more info about this param in [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse#Example.3A_Using_the_reviver_parameter)
-  - options.initialValue: init value for json
 
 #### Return value
 

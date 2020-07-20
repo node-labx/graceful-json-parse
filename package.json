@@ -1,0 +1,27 @@
+{
+  "name": "graceful-json-parse",
+  "version": "0.0.0",
+  "description": "Parse your json safely and stop writing try {} catch {}",
+  "main": "index.js",
+  "scripts": {
+    "test": "nyc ava --verbose --no-cache --timeout=1m",
+    "test:watch": "nyc ava --verbose --watch --no-cache --timeout=1m",
+    "report": "nyc report --reporter=html && open coverage/index.html",
+    "release": "sh release.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/node-labx/graceful-json-parse.git"
+  },
+  "keywords": [],
+  "author": "kk",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/node-labx/graceful-json-parse/issues"
+  },
+  "homepage": "https://github.com/node-labx/graceful-json-parse#readme",
+  "devDependencies": {
+    "ava": "^3.5.0",
+    "nyc": "^15.0.0"
+  }
+}
