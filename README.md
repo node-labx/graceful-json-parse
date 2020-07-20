@@ -10,12 +10,12 @@ npm install graceful-json-parse
 
 #### Parameters
 
-- jsonString: the string to parse as JSON
+- jsonString: The string to parse as JSON.
 - options(optional)
   - options.reviver: If a function, this prescribes how the value originally produced by parsing is transformed, before being returned. more info about this param in [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse#Example.3A_Using_the_reviver_parameter)
   - options.initialValue: init value for json
 
-#### Returns
+#### Return value
 
 object {error, data}
 
@@ -30,24 +30,24 @@ const jsonParse = require("graceful-json-parse");
 const result = jsonParse("{}");
 ```
 
-### 2、jsonParseAndReturnTuple(jsonString[, options])
+### 2、jsonParse(jsonString[, options])
 
 The parameters and return value is the same as above.
 
 ```js
-const { jsonParseAndReturnTuple } = require("graceful-json-parse");
+const jsonParse = require("graceful-json-parse/tuple");
 
-const [error, data] = jsonParseAndReturnTuple("{}");
+const [error, data] = jsonParse("{}");
 ```
 
-### 3、jsonParseWithCallback(jsonString[, options], callback)
+### 3、jsonParse(jsonString[, options], callback)
 
 The parameters and return value is the same as above.
 
 ```js
-const { jsonParseWithCallback } = require("graceful-json-parse");
+const jsonParse = require("graceful-json-parse/callback");
 
-jsonParseWithCallback("{}", function (error, data) {
+jsonParse("{}", function (error, data) {
   // your code
 });
 ```
