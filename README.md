@@ -42,7 +42,7 @@ const { tupleJsonParse } = require("graceful-json-parse");
 const [err, result] = tupleJsonParse("{}");
 ```
 
-### 1、callbackJsonParse
+### 3、callbackJsonParse
 
 ```js
 const { callbackJsonParse } = require("graceful-json-parse");
