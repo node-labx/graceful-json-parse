@@ -28,13 +28,13 @@ test(`json parse and return object with reviver -> ${s1}`, (t) => {
 
 test(`json parse and return object -> ${s2}`, (t) => {
   const r = jsonParse(s2);
-  t.true(r.error instanceof SyntaxError);
+  t.true(r.error instanceof Error);
   t.is(r.data, undefined);
 });
 
 test('json parse and return object -> ""', (t) => {
   const r = jsonParse('');
-  t.true(r.error instanceof SyntaxError);
+  t.true(r.error instanceof Error);
   t.is(r.data, undefined);
 });
 
@@ -46,7 +46,7 @@ test('json parse and return object -> null', (t) => {
 
 test('json parse and return object -> undefined', (t) => {
   const r = jsonParse(undefined);
-  t.true(r.error instanceof SyntaxError);
+  t.true(r.error instanceof Error);
   t.is(r.data, undefined);
 });
 

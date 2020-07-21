@@ -23,5 +23,8 @@
   "devDependencies": {
     "ava": "^3.5.0",
     "nyc": "^15.0.0"
+  },
+  "dependencies": {
+    "graceful-error": "1.1.1"
   }
 }

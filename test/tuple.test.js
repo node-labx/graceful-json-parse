@@ -33,7 +33,7 @@ test(`json parse and return tuple -> ${s2}`, (t) => {
 });
 test('json parse and return tuple -> ""', (t) => {
   const r = jsonParse('');
-  t.true(r[0] instanceof SyntaxError);
+  t.true(r[0] instanceof Error);
   t.is(r[1], undefined);
 });
 
@@ -45,7 +45,7 @@ test('json parse and return tuple -> null', (t) => {
 
 test('json parse and return tuple -> undefined', (t) => {
   const r = jsonParse(undefined);
-  t.true(r[0] instanceof SyntaxError);
+  t.true(r[0] instanceof Error);
   t.is(r[1], undefined);
 });
 
